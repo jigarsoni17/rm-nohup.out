@@ -19,4 +19,7 @@ do
 done
 
 mv $(find /home/*/*/nohup.out* -type f -size +3G) ~/nohupfiles/
+
+sh service restart command
+
 aws s3 cp ~/nohupfiles s3://admin-panel-logs/$ip/
